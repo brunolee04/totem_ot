@@ -1,16 +1,18 @@
-import React,{useState} from 'React';
+//import React,{useState} from 'React';
 import './style.css';
 
 export function Seller(props){
 
     const storeUrl = "https://oficinadotenista.com.br/?totem=true&tracking="+props.affiliate_code;
-    const userImgUrl = "https://oficinadotenista.com.br/image/totem/"+props.iconLetter+".png";
+    //const userImgUrl = "https://oficinadotenista.com.br/image/totem/"+props.iconLetter+".png";
+
+    const affiliateLetter = props.name.charAt(0).toUpperCase();
 
     return (
         <div>
             <a href={storeUrl} className="gmail">
                 <div className="icon">
-                    <img src={userImgUrl}/>
+                    <div className='affiliateLetter'>{affiliateLetter}</div>
                 </div>
 
                 <div className="content">
