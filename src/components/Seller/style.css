@@ -98,3 +98,19 @@
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.selected {
+    background: #ff7500 !important;
+}
+
+.selected .icon{
+    background: #ffffff  !important;
+}
+
+.selected .affiliateLetter{
+    color: #f95716  !important;
+}
+
+.selected h1,.selected span  {
+    color: #fff !important;
+}
