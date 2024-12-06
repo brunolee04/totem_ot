@@ -75,7 +75,7 @@ export function Home(){
                         }
                     </nav>
 
-                    <nav>
+                    <nav  className='active buttons'>
                         <div className="row">
                             <div className="col-md-6">
                                     <button className="btn btn-default">

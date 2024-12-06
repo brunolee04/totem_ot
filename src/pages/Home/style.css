@@ -223,3 +223,9 @@ p {
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
+
+.buttons{
+    background: #fff;
+    margin-top: 20px;
+    height: 50px;
+}
