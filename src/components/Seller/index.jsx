@@ -9,20 +9,29 @@ export function Seller(props){
 
     const affiliateLetter = props.name.charAt(0).toUpperCase();
 
-    const selectSeller = props.callbackFunction;
-    
-    console.log('board game',selectSeller,props);
+    const key = props.id;
+    const id  = props.id.replace(".","");
 
+    const selectSeller = props.callbackFunction;
+   
     const [selected, setSelected] = useState(false);
 
-    function preSelectSeller() {
-        selectSeller(affiliate_code);
+
+    function preSelectSeller(id,key) {
+        var selectedEl = document.querySelectorAll("a");
+        var especificEl = document.querySelector(`#${id}`);
+        for(var i = 0; i < selectedEl.length; i++){
+            selectedEl[i].classList.remove("selected");
+        }
+        especificEl.classList.add("selected");
         setSelected(!selected);
+        selectSeller(key);
+        
     }
 
     return (
-        <div>
-            <a onClick={preSelectSeller} className={selected ? 'selected' : ''} >
+        <div key={key}>
+            <a onClick={()=>preSelectSeller(id,key)} id={id}  >
                 <div className="icon">
                     <div className='affiliateLetter'>{affiliateLetter}</div>
                 </div>
@@ -30,9 +39,7 @@ export function Seller(props){
                 <div className="content">
                     <h1>{props.name}</h1>
                     <span>{props.mail}</span>
-                </div>
-                
-               
+                </div>      
             </a>
         </div> 
     )

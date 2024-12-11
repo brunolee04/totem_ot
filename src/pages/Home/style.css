@@ -3,7 +3,7 @@ html,body,main,section,div,aside{
 }
 
 body {
-    background: #051321;
+    background: #DDD;
     font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -160,6 +160,7 @@ p {
 
 .contact main .title.active {
     max-height: 100px;
+    text-align: center;
     -webkit-transition: all 1.3s;
     -moz-transition: all 1.3s;
     -o-transition: all 1.3s;
@@ -225,7 +226,36 @@ p {
 }
 
 .buttons{
-    background: #fff;
-    margin-top: 20px;
-    height: 50px;
+   /* background: #fff;*/
+   /* margin-top: 20px;*/
+    height: 200px;
+}
+
+.btn-default{
+    background: #FFF;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    width: 95%;
+    display: flex;
+}
+
+.btn-ot{
+    margin-left: 5px;
+}
+
+.btn-ru{
+    margin-right: 5px;
+}
+
+a {
+    color: #000 !important;
+}
+
+a:hover {
+    background: #fff !important;
+}
+
+span.btnText {
+    font-size: 15px;
+    margin: auto;
 }
